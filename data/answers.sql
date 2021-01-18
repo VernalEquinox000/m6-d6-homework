@@ -12,3 +12,19 @@ INSERT INTO customers VALUES ('GMARX', 'Dylan Dog Limited', 'Groucho Marx', 'Ass
 INSERT INTO customers VALUES ('ELPRE', 'Rnr king llc', 'Elvis Presely', 'King', '3600 Priesley Blvd.', 'Memphis', 'TN', '38116', 'USA', '(1) 087-423413', '(1) 796-79687');
 
 SELECT * FROM public.customers WHERE contact_title='Sales Representative'
+
+UPDATE public.customers SET company_name = 'Linkedin' WHERE customer_id='BOTTM'
+
+SELECT * FROM  public.customers WHERE region is null AND country='USA'
+
+DELETE FROM  public.customers WHERE postal_code = '1734'
+
+SELECT * FROM public.customers WHERE contact_title = 'Owner'
+
+SELECT company_name , contact_name, contact_title FROM public.customers WHERE country='Brazil'
+
+SELECT contact_name as name, contact_title as title FROM public.customers WHERE country='Finland'
+
+DELETE FROM public.customers WHERE city='Lyon'
+
+UPDATE public.customers SET region='Unknown' WHERE region is null
